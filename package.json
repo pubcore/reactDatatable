@@ -1,6 +1,6 @@
 {
   "name": "pubcore-react-datatable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "stateless react components for HTML tables",
   "main": "js/view/Datatable.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "babel src --out-dir js",
     "watch": "watch \"npm run build\" ./src",
     "pack": "npm run build && webpack --optimize-minimize",
-    "prepublish":"npm run build"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
