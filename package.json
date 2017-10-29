@@ -1,0 +1,55 @@
+{
+  "name": "pubcore-react-datatable",
+  "version": "1.0.0",
+  "description": "stateless react components for HTML tables",
+  "main": "js/view/Datatable.js",
+  "scripts": {
+    "test": "mocha --watch --require babel-register --recursive",
+    "build": "babel src --out-dir js",
+    "watch": "watch \"npm run build\" ./src",
+    "pack": "npm run build && webpack --optimize-minimize",
+    "prepublish":"npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pubcore/reactDatatable.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pubcore/reactDatatable/issues"
+  },
+  "homepage": "https://github.com/pubcore/reactDatatable#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.2",
+    "eslint": "^4.9.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "eslint-plugin-react": "^7.4.0",
+    "mocha": "^4.0.1",
+    "react-test-renderer": "^16.0.0",
+    "sinon": "^4.0.1",
+    "watch": "^1.0.2",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "prop-types": "~15.6.0",
+    "pubcore-ui-text": "~1.0.7",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  }
+}
