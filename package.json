@@ -1,5 +1,5 @@
 {
-  "name": "@pubcore/pubcore-react-datatable",
+  "name": "pubcore-react-datatable",
   "version": "1.0.2",
   "description": "stateless react components for HTML tables",
   "main": "js/view/Datatable.js",
