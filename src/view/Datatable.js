@@ -10,7 +10,7 @@ import ColumnsConfig from './ColumnsConfig'
 
 $.propTypes = {
 	rows:PT.arrayOf(PT.object),
-	cols:PT.arrayOf(PT.oneOfType(PT.string, PT.number))
+	cols:PT.arrayOf(PT.oneOfType([PT.string, PT.number]))
 }
 $.displayName = 'Datatable'
 $.renderChildren = () => {}
