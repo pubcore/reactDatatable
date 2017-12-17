@@ -3,7 +3,7 @@ import PT from 'prop-types'
 
 $.displayName = 'Cell'
 $.propTypes = {
-	data:PT.oneOfType([PT.string, PT.number]),
+	data:PT.oneOfType([PT.string, PT.number, PT.bool, PT.object]),
 	isHead:PT.bool
 }
 

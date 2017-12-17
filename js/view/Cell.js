@@ -19,7 +19,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 $.displayName = 'Cell';
 $.propTypes = {
-	data: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+	data: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number, _propTypes2.default.bool, _propTypes2.default.object]),
 	isHead: _propTypes2.default.bool
 };
 

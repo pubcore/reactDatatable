@@ -51,7 +51,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 $.propTypes = {
 	rows: _propTypes2.default.arrayOf(_propTypes2.default.object),
-	cols: _propTypes2.default.arrayOf(_propTypes2.default.oneOfType(_propTypes2.default.string, _propTypes2.default.number))
+	cols: _propTypes2.default.arrayOf(_propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]))
 };
 $.displayName = 'Datatable';
 $.renderChildren = function () {};
