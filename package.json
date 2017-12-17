@@ -4,7 +4,7 @@
   "description": "stateless react components for HTML tables",
   "main": "js/view/Datatable.js",
   "scripts": {
-    "test": "mocha --watch --require babel-register --recursive",
+    "test": "mocha --require babel-register --recursive",
     "build": "babel src --out-dir js",
     "watch": "watch \"npm run build\" ./src",
     "pack": "npm run build && webpack --optimize-minimize",
