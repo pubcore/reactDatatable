@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/pubcore/reactDatatable.svg?branch=master)](https://travis-ci.org/pubcore/reactDatatable)
+
 ## Stateless react components to render HTML tables
 
 ### Installation
