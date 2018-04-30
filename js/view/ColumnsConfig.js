@@ -43,7 +43,7 @@ function $(_ref) {
 		isActive ? _react2.default.createElement(
 			'fieldset',
 			{ className: 'options' },
-			all.sort().map(function (col) {
+			all.slice().sort().map(function (col) {
 				var className = 'visibility ' + (visible.indexOf(col) > -1 ? 'off' : 'on');
 				return 0 || _react2.default.createElement(
 					'div',
