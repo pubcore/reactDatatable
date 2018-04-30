@@ -17,7 +17,7 @@ export default function $({all, sequence, visible, isActive, gofer}) {
 	</button>
 	{ isActive ?
 		<fieldset className="options">
-			{all.sort().map(col => {
+			{all.slice().sort().map(col => {
 				var className = 'visibility ' + (visible.indexOf(col) > -1 ? 'off' : 'on')
 				return 0||
 		<div className="col-options" key={col}>
