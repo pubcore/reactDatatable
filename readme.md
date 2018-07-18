@@ -4,11 +4,11 @@
 
 ### Installation
 
-	npm install --save pubcore-react-datatable
+	npm install --save @pubcore/react-datatable
 
 ### Examples
 
-	import Datatable from 'pubcore-react-datatable'
+	import Datatable from '@pubcore/react-datatable'
 
 	const rows = [
 		{a:'11', b:'12'},
@@ -25,7 +25,7 @@
 ## customize table view
 
 	//some more components to import
-	import Datatable, {Head, HeadRow, Cell, Body, Row} from 'pubcore-react-datatable'
+	import Datatable, {Head, HeadRow, Cell, Body, Row} from '@pubcore/react-datatable'
 
 	//table with individual header row(s)
 	<Datatable {...{rows, cols}}>
