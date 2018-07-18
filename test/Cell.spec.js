@@ -15,4 +15,8 @@ describe('<Cell/>', () => {
 		const wrapper = shallow(<Cell><span/></Cell>)
 		expect(wrapper.contains(<span/>))
 	})
+	it('shows json for data of type object as default', () => {
+		const wrapper = shallow(<Cell data={{foo:'bar'}}/>)
+		expect(wrapper.contains('"foo":"bar"'))
+	})
 })
