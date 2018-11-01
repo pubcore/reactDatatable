@@ -17,7 +17,7 @@ describe('<HeadRow />', () => {
 		expect(wrapper.find({isHead:true})).to.have.length(1)
 	})
 	it('it support function as child', () => {
-		const wrapper = shallow(<HeadRow cols={[1]}>{() => <Cell/>}</HeadRow>)
+		const wrapper = shallow(<HeadRow cols={[1]}>{() => <Cell key='xy'/>}</HeadRow>)
 		expect(wrapper.contains(<Cell/>)).to.be.true
 	})
 })

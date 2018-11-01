@@ -15,7 +15,7 @@ describe('<Row />', () => {
 		expect(wrapper.hasClass('foo')).to.be.true
 	})
 	it('support child function', () => {
-		const wrapper = shallow(<Row {...{row}}>{({col}) => <span>{col}</span>}</Row>)
+		const wrapper = shallow(<Row {...{row}}>{({col}) => <span key={col}>{col}</span>}</Row>)
 		expect(wrapper.contains(<span>a</span>)).to.be.true
 	})
 	it('renders cells by given row data', () => {

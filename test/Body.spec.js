@@ -17,8 +17,13 @@ describe('<Body />', () => {
 		const wrapper = shallow(<Body className="foo" />)
 		expect(wrapper.hasClass('foo')).to.equal(true)
 	})
-	it('can render Rows', () => {
+	it('can render Rows (array of array)', () => {
 		const wrapper = shallow(<Body {...{rows}}/>)
+		expect(wrapper.find(Row)).to.have.length(2)
+		expect(wrapper.containsMatchingElement([Head, HeadRow])).to.be.false
+	})
+	it('can render Rows (array of object)', () => {
+		const wrapper = shallow(<Body {...{rows:[{a:1}, {a:2}]}}/>)
 		expect(wrapper.find(Row)).to.have.length(2)
 		expect(wrapper.containsMatchingElement([Head, HeadRow])).to.be.false
 	})

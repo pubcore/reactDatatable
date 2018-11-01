@@ -3,7 +3,7 @@ import Cell from './Cell'
 import PT from 'prop-types'
 
 $.propTypes = {
-	row:PT.object,
+	row:PT.oneOfType([PT.object, PT.array]),
 	cols:PT.arrayOf(PT.oneOfType([PT.string, PT.number])),
 	isHead:PT.bool,//will render "th" elements, instead of "td"
 }
