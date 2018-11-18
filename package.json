@@ -27,12 +27,12 @@
     "babel-preset-react": "^6.24.1",
     "chai": "^4.2.0",
     "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "^4.19.1",
     "eslint-plugin-mocha": "^4.12.1",
-    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-react": "^7.11.1",
     "mocha": "^4.1.0",
-    "react-test-renderer": "^16.6.0",
+    "react-test-renderer": "^16.6.3",
     "sinon": "^4.5.0",
     "watch": "^1.0.2",
     "webpack": "^3.12.0"
@@ -40,8 +40,8 @@
   "dependencies": {
     "prop-types": "^15.6.2",
     "pubcore-ui-text": "^1.0.8",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
   },
   "babel": {
     "presets": [
