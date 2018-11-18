@@ -30,8 +30,8 @@
 	//table with individual header row(s)
 	<Datatable {...{rows, cols}}>
 	    <Head>
-	        <HeadRow>{({col}) =>
-	            <Cell key={col}>
+	        <HeadRow>{({col, isHead}) =>
+	            <Cell {...{key:col, isHead}} >
 	                {col} <button onClick={e => alert('info')} type="button">i</button>
 	            </Cell>
 	        }</HeadRow>
