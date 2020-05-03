@@ -8,13 +8,13 @@ import PT from 'prop-types'
 import Rowcount from './Rowcount'
 import ColumnsConfig from './ColumnsConfig'
 
-$.propTypes = {
+Datatable.propTypes = {
 	rows:PT.arrayOf(PT.object),
-	cols:PT.arrayOf(PT.oneOfType([PT.string, PT.number]))
+	cols:PT.arrayOf(PT.oneOfType([PT.string, PT.number])),
+	children:PT.node
 }
-$.displayName = 'Datatable'
-$.renderChildren = () => {}
-export default function $({children, rows, cols, ...rest}){
+Datatable.renderChildren = () => {}
+export default function Datatable({children, rows, cols, ...rest}){
 	var childs = {}
 
 	return 0||

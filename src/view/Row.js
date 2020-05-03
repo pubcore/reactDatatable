@@ -2,13 +2,14 @@ import React from 'react'
 import Cell from './Cell'
 import PT from 'prop-types'
 
-$.propTypes = {
+Row.propTypes = {
 	row:PT.oneOfType([PT.object, PT.array]),
+	children:PT.oneOfType([PT.func, PT.node]),
 	cols:PT.arrayOf(PT.oneOfType([PT.string, PT.number])),
-	isHead:PT.bool,//will render "th" elements, instead of "td"
+	isHead:PT.bool,//will render "th" elements, instead of "td",
+	index:PT.number,
 }
-$.displayName = 'Row'
-export default function $({row, children, cols, index, isHead, ...rest}){
+export default function Row({row, children, cols, index, isHead, ...rest}){
 	var cellMap
 	if(typeof children === 'function'){
 		cellMap = children

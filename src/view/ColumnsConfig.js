@@ -1,14 +1,14 @@
 import React from 'react'
 import PT from 'prop-types'
 
-$.propTypes = {
+ColumnsConfig.propTypes = {
 	all:PT.arrayOf(PT.string).isRequired,
 	visible:PT.arrayOf(PT.string),
 	sequence:PT.arrayOf(PT.string),
-	isActiveCol:PT.string,
+	isActive:PT.string,
+	gofer:PT.object
 }
-$.displayName = 'ColumnsConfig'
-export default function $({all, sequence, visible, isActive, gofer}) {
+export default function ColumnsConfig({all, sequence, visible, isActive, gofer}) {
 	visible = visible || all
 	return 0||
 <form className="datatable-columns-config">
