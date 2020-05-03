@@ -30,8 +30,8 @@
 	//table with individual header row(s)
 	<Datatable {...{rows, cols}}>
 	    <Head>
-	        <HeadRow>{({col, isHead}) =>
-	            <Cell {...{key:col, isHead}} >
+	        <HeadRow>{({col, isHead, key}) =>
+	            <Cell {...{key, isHead}} >
 	                {col} <button onClick={e => alert('info')} type="button">i</button>
 	            </Cell>
 	        }</HeadRow>
@@ -42,10 +42,10 @@
 	//change view of column's data
 	<Datatable {...{rows, cols}} >
 	    <Body>
-	        <Row>{({col, row}) => ({'b' :
-	            <Cell data={(new Date(row[col])).toLocaleDateString()} key={col}/>
+	        <Row>{({col, row, index, key}) => ({'b' :
+	            <Cell {...{data:(new Date(row[col])).toLocaleDateString(), key}}/>
 	            }[col] ||
-	            <Cell key={col} data={row[col]}/>
+	            <Cell {...{data:`# ${index}`, key}}/>
 	        )}</Row>
 	    </Body>
 	</Datatable>
