@@ -18,7 +18,7 @@ export default function Row({row, children, cols, index, isHead, ...rest}){
 	return 0||
 <tr {...rest}>
 	{(cols ? cols : Object.keys(row||{})).map(col =>
-		cellMap ? cellMap({col, row, isHead, index})
+		cellMap ? cellMap({col, row, isHead, index, key:col})
 			: <Cell {...{data:row !== undefined ? row[col] : col, isHead, key:col}}/>
 	)}
 </tr>
