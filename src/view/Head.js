@@ -1,6 +1,6 @@
 import React from 'react'
 import HeadRow from './HeadRow'
-
+/* eslint react/prop-types: 0 */
 export default function Head({cols, rows, children, ...rest}){
 	var childs = []
 
