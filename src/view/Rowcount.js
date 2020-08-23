@@ -1,5 +1,10 @@
 import PT from 'prop-types'
-import uiText from '@pubcore/ui-text'
+const uiText = (T, key, def, replacements={}) =>
+	(T && T[key] || def).replace(
+		/\{(\w+)\}/g,
+		(m, tag) => tag in replacements ? replacements[tag] : m
+	)
+
 
 Rowcount.propTypes = {
 	rowCount:PT.number.isRequired,
@@ -13,7 +18,7 @@ export default function Rowcount({rowCount, total, offset, T}) { return 0||
 		first: offset + 1,
 		last: offset + rowCount,
 		num: total > rowCount ? total : rowCount
-	}, T.__config)
+	})
 	:
-	uiText(T, 'no_entries', 'Not entries found', null, T.__config)
+	uiText(T, 'no_entries', 'Not entries found')
 }
