@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Children, cloneElement} from 'react'
 import Body from './Body'
 import Row from './Row'
 import Head from './Head'
@@ -15,16 +15,16 @@ Datatable.propTypes = {
 }
 Datatable.renderChildren = () => {}
 export default function Datatable({children, rows, cols, ...rest}){
-	var childs = {}
+	var custom = {}
 
-	return 0||
-<table className='datatable' {...rest}>
-	{React.Children.forEach(children, child => childs[child.type.name] = child)}
-	{childs['Head'] && React.cloneElement(childs['Head'], {rows, cols})
-		|| cols && <Head {...{rows, cols}}/>}
-	{childs['Body'] && React.cloneElement(childs['Body'], {rows, cols})
-		|| rows && <Body {...{rows, cols}}/>}
-</table>
+	Children.forEach(children, child => {
+		custom[[Head, Body].indexOf(child.type)] = cloneElement(child, {rows, cols})
+	})
+
+	return <table className='datatable' {...rest}>
+		{custom[0] || cols && <Head {...{rows, cols}}/>}
+		{custom[1] || rows && <Body {...{rows, cols}}/>}
+	</table>
 }
 
 export {Body, Row, Head, HeadRow, Cell, Rowcount, ColumnsConfig}
