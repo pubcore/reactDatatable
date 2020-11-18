@@ -28,6 +28,11 @@ describe('<Head/>', () => {
 
 	it('supports HeadRow and Row children', () => {
 		const wrapper = shallow(<Head {...{cols}}><HeadRow/><Row/></Head>)
-		expect(wrapper.contains([<HeadRow {...{cols}}/>, <Row {...{cols}}/>])).to.be.true
+		expect(wrapper.contains([<HeadRow {...{cols}} key=""/>, <Row {...{cols}} key=""/>])).to.be.true
+	})
+	it('ignores falsy childs', () => {
+		expect(()=>
+			shallow(<Head {...{cols}}><HeadRow/>{null}</Head>)
+		).not.to.throw()
 	})
 })

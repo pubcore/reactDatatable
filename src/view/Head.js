@@ -6,8 +6,8 @@ export default function Head({cols, rows, children, ...rest}){
 
 	if(React.Children.count(children)){
 		React.Children.forEach(children, (child, i) => {
-			childs.push(React.cloneElement(child, {
-				cols:child.props.cols || cols, 
+			child && childs.push(React.cloneElement(child, {
+				cols:child.props.cols || cols,
 				rows,
 				key:i
 			}))
