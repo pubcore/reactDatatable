@@ -2,7 +2,7 @@ import React from 'react'
 import PT from 'prop-types'
 
 Cell.propTypes = {
-	data:PT.oneOfType([PT.string, PT.number, PT.bool, PT.object]),
+	data:PT.oneOfType([PT.string, PT.number, PT.bool, PT.object, PT.array]),
 	isHead:PT.bool,
 	children:PT.node
 }
