@@ -7,5 +7,8 @@ module.exports = {
 		libraryTarget: 'var',
 		library: 'Datatable',
 		libraryExport: 'default'
+	},
+	optimization: {
+		minimize: true
 	}
 }
